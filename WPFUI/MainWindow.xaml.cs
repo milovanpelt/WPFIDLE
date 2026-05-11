@@ -26,5 +26,10 @@ namespace WPFRPG
 
             DataContext = _gameSession;
         }
+
+        private void AddXP_Click(object sender, RoutedEventArgs e)
+        {
+            _gameSession.CurrentPlayer.ExpPoints += 10;
+        }
     }
 }
