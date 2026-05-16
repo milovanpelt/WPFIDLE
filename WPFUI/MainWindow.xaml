@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFRPG"
+        xmlns:uc="clr-namespace:WPFUI.Controls"
         mc:Ignorable="d"
         FontSize="11pt"
         Title="MainWindow" Height="768" Width="1024">
@@ -20,37 +21,9 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="LightSlateGray" TextElement.Foreground="White"></Label>
-        <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.Row="0" Grid.Column="0" Content="Name: "/>
-            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Class: "/>
-            <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.CharacterClass}"/>
-            <Label Grid.Row="2" Grid.Column="0" Content="HitPoints: "/>
-            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}"/>
-            <Label Grid.Row="3" Grid.Column="0" Content="Experience Points: "/>
-            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.ExpPoints}"/>
-            <Label Grid.Row="4" Grid.Column="0" Content="Level: "/>
-            <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.Level}"/>
-            <Label Grid.Row="5" Grid.Column="0" Content="Gold: "/>
-            <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
-            <Button Grid.Row="6" Grid.Column="1" Content="Add XP" Click="AddXP_Click"></Button>
-        </Grid>
-
+        <uc:PlayerStats Grid.Row="1" Grid.Column="0"/>
+        
+        
         <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
