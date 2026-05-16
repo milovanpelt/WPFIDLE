@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFRPG"
+        xmlns:uc="clr-namespace:WPFUI.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        FontSize="11pt"
+        Title="MainWindow" Height="768" Width="1024">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -19,8 +21,10 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="LightSlateGray" TextElement.Foreground="White"></Label>
-        <Label Grid.Row="1" Grid.Column="0" Content="Player Data" Background="Aquamarine"></Label>
-        <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Beige"></Label>
+        
+        <uc:PlayerStats Grid.Row="1" Grid.Column="0"/>
+        <uc:GameData Grid.Row="1" Grid.Column="1"/>
+
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory/Quests" Background="BurlyWood"></Label>
         <Label Grid.Row="2" Grid.Column="1" Content="Combat/Movement controls" Background="Lavender"></Label>
     </Grid>

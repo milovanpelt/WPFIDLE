@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="WPFRPG.csproj" />
+  <Project Path="Engine/Engine.csproj" Id="6eff6abd-1e81-49ad-a2a7-5039ab12b375" />
+  <Project Path="WPFUI/WPFUI.csproj" />
 </Solution>
