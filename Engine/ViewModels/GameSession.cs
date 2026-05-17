@@ -39,8 +39,7 @@ namespace Engine.ViewModels
                 Gold = 0
             };
 
-            WorldFactory worldFactory = new WorldFactory();
-            CurrentWorld = worldFactory.CreateWorld();
+            CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.GetLocationAt(0, 0);
         }
