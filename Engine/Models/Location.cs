@@ -1,17 +1,23 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
 namespace Engine.Models
 {
-    public class Location
+    public partial class Location : ObservableObject
     {
-        public Vector2 Position { get; set; }
-        public string? Name { get; set; }
+        [ObservableProperty]
+        public Vector2 position;
 
-        public string? Description { get; set; }
+        [ObservableProperty]
+        public string? name;
 
-        public string? ImageName { get; set; }
+        [ObservableProperty]
+        public string? description;
+
+        [ObservableProperty]
+        public string? imageName;
     }
 }
